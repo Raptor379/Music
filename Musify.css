@@ -1,0 +1,80 @@
+:root {
+    --main-color: #070606;
+    --elements-color: #000000;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: 1250px;
+    background-color: var(--main-color);
+    padding: 14px 46px 75px 90px;
+}
+    header nav{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 99px 0 0;
+    }
+        header nav article{
+            display: flex;
+            justify-content: space-between;
+            gap: 60px
+        }
+            header nav article ul{
+                display: flex;
+                gap: 40px;
+            }
+                header nav article ul li{
+                   transition: border-bottom 0.5s ease; 
+                   border-bottom: 2px solid transparent;
+                }
+                header nav article ul li:hover{
+                    border-bottom: 2px solid #FC9918;
+                    }
+        header nav article .tumbler{
+            display: flex;
+            justify-content: space-between;
+            width: 80px;
+            height: 37px;
+            padding: 4px;
+            background-color: var(--elements-color);
+            border-radius: 30px;
+        }
+            header nav article .tumbler div{
+                width: 28px;
+                height: 28px;
+                background-color: #888888;
+                border-radius: 28px;}    
+        header nav article button{
+            padding: 14px 38px;}
+                #tumbler{
+                    transition: transform 0.5s ease;
+                    translate: 42px;
+                }
+                    #sun{
+                        opacity: 0;
+                    }
+    header section{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 40px;}
+            header section h1{
+                max-width: 570px;
+            }
+            header section h5{
+                max-width: 727px;
+            }
+            header section article{
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+                margin: 0 0 0 25px;
+            }
+                header section article button{
+                    width: 220px;
+                    height: 64px;
+                }
+    

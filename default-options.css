@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('fonts/Proxima\ Nova/proximanova_regular.ttf') format('woff');
+}
+:root{
+    --text-color: #FFFFFF;
+}
+.transition_standart, .transition_standart:hover{
+    transition: 0.5s;
+}
+*{
+    font-family: 'Proxima Nova';
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    user-select: none;
+    transition: 0.5s;
+    border: none;
+    }
+.white{
+    color: var(--text-color);    
+}
+.orange{
+    color: #F14A16;    
+}
+.position_absolute{
+    position: absolute;
+    z-index: 2;
+}
+.display_none{
+    display: none;
+}
+button.fill{
+    background-color: #F14A16;
+    color: #E5E5E5;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 15px;
+    box-shadow: 0 0 21px #F14A16;
+    cursor: pointer;
+    transition: 0.5s;}
+button.fill:hover{
+    background-color: #c93c12;
+    transition: 0.5s;}
+button.fill:active{
+    background-color: #F14A16;
+    color: #ffffff;}
+button.transparent{
+    border: 1px #F14A16 solid;
+    background-color: rgba(255, 255, 255, 0);
+    color: #F14A16;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 15px;
+    box-shadow: 0 0 7px #F14A16;
+    cursor: pointer;
+    transition: 0.5s;}
+button.transparent:hover{
+    background-color: #f149162f;
+    transition: 0.5s;}
+button.transparent:active{
+    background-color: #ffffff00;
+    color: #ffffff;}
+.pointer{
+    cursor: pointer;
+}
+h1{
+    color: var(--text-color);
+    font-size: 85px;
+    font-weight: 700;
+    line-height: 100px;
+    letter-spacing: 5%;
+}
+h5{
+    color: #A4A4A4;
+    font-size: 32px;
+    font-weight: 100;
+    line-height: 40px;
+    letter-spacing: 2%;
+}
