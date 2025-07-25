@@ -2,9 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const tumbler = document.getElementById('tumbler');
   const sun = document.getElementById('sun');
   const moon = document.getElementById('moon');
-  const NavIcons = document.querySelectorAll('.display-transition');
-  const NavIconsNone = document.querySelectorAll('.display_none-transition');
-  const shadows = document.querySelectorAll('.shadow-transition') 
+  const Display = document.querySelectorAll('.display-transition');
+  const DisplayNone = document.querySelectorAll('.display_none-transition');
+  //const Particles = document.querySelectorAll
+  const shadows = document.querySelectorAll('.shadow-transition')
+        const man = document.getElementById('bg-man');
   let positionX = 0;
   let tumblerState = true;
 
@@ -18,15 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.style.setProperty('--main-color', '#FAFAFA');
         document.documentElement.style.setProperty('--elements-color', '#FAFAFA');
         document.documentElement.style.setProperty('--text-color', '#000000');
-        NavIcons.forEach(el => {
+        Display.forEach(el => {
             el.style.display = 'none';
         })
-        NavIconsNone.forEach(el => {
+        DisplayNone.forEach(el => {
             el.style.display = 'block';
         })
         shadows.forEach(el => {
             el.style.boxShadow = '0 4px 12px #0000003d';
         })
+         //   man.src = man.src.slice(0, -4) + '-Light.svg';
     }
     else {
         positionX = 0;
@@ -37,15 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.style.setProperty('--main-color', '#070606');
         document.documentElement.style.setProperty('--elements-color', '#000000');
         document.documentElement.style.setProperty('--text-color', '#FFFFFF');
-        NavIconsNone.forEach(el => {
+        DisplayNone.forEach(el => {
             el.style.display = 'none';
         })
-        NavIcons.forEach(el => {
+        Display.forEach(el => {
             el.style.display = 'block';
         })
         shadows.forEach(el => {
             el.style.boxShadow = 'none';
         })
+       // man.src = man.src.slice(0, -10) + '.svg';
     }
   });
 });

@@ -2,13 +2,18 @@
     --main-color: #070606;
     --elements-color: #000000;
 }
+body{
+    background-color: var(--main-color);
+    transition: 0.5s;
+}
 header{
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     align-items: start;
     height: 1250px;
-    background-color: var(--main-color);
     padding: 14px 46px 75px 90px;
 }
     header nav{
@@ -40,6 +45,7 @@ header{
             height: 37px;
             padding: 4px;
             background-color: var(--elements-color);
+            transition: 0.5s;
             border-radius: 30px;
         }
             header nav article .tumbler div{
@@ -76,5 +82,62 @@ header{
                 header section article button{
                     width: 220px;
                     height: 64px;
+                    gap: 10px;
                 }
+    header aside{
+        display: flex;
+        justify-content: right;
+        width: 100%;
+        gap: 230px;
+    }
+        header aside ul{
+            display: flex;
+            justify-content: space-between;
+            width: 1130px;}
+                header aside ul li{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    align-items: start;
+                    background: linear-gradient(135deg,#c0c0c044 20%, #ffffff1a 50%,#ffffff00 90%);
+                    backdrop-filter: blur(30px);
+                    height: 180px;
+                    width: 350px;
+                    border: 1px #ffffff50 solid;
+                    border-radius: 25px;
+                    padding: 10px 15px;
+                }
+                    header aside ul li img{
+                        position: absolute;
+                        top: -105px;
+                        left: 100px;}
+.Background-particle-blue{
+    position: absolute;
+    width: 904px;
+    height: 904px;
+    border-radius: 904px;
+    background-color: #34489A;
+    filter: blur(340px);
+    z-index: -1;
+    bottom: 0;
+    left: -189px;
+}
+.Background-particle-purple{
+    position: absolute;
+    width: 954px;
+    height: 954px;
+    border-radius: 954px;
+    background-color: #370665;
+    filter: blur(300px);
+    z-index: -1;
+    top: -315px;
+    right: -100px;
+}
+.Background-man{
+    position: absolute;
+    float: right;
+    z-index: -1;
+    right: 0;
+}
     
