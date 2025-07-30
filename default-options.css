@@ -9,6 +9,7 @@
     transition: 0.5s;
 }
 *{
+    color: var(--text-color);
     font-family: 'Proxima Nova';
     padding: 0;
     margin: 0;
@@ -20,10 +21,6 @@
     user-select: none;
     border: none;
     }
-.white{
-    color: var(--text-color);
-    transition: 0.5s;    
-}
 .orange{
     color: #F14A16;    
 }
@@ -68,26 +65,24 @@ button.transparent:active{
     cursor: pointer;
 }
 h1{
-    color: var(--text-color);
     transition: 0.5s;
     font-size: 85px;
     font-weight: 700;
     line-height: 100px;
-    letter-spacing: 5%;
+    letter-spacing: 0.05em;
 }
 h2{
-    color: var(--text-color);
     transition: 0.5s;
     font-size: 24px;
     font-weight: 400;
     line-height: 40px;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
 }
-h2 > *:nth-child(2){
+h2 > font:nth-of-type(2){
     color: #FC9918;
     margin: 0 17px 0 0;
 }
-h2 > *:nth-child(3) {
+h2 > font:nth-of-type(3){
     font-size: 18px;
     text-decoration: line-through;
 }
@@ -96,5 +91,5 @@ h5{
     font-size: 32px;
     font-weight: 100;
     line-height: 40px;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
 }

@@ -4,9 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const moon = document.getElementById('moon');
   const Display = document.querySelectorAll('.display-transition');
   const DisplayNone = document.querySelectorAll('.display_none-transition');
-  //const Particles = document.querySelectorAll
   const shadows = document.querySelectorAll('.shadow-transition')
-        const man = document.getElementById('bg-man');
+  const man = document.getElementById('bg-man');
   let positionX = 0;
   let tumblerState = true;
 
@@ -29,7 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
         shadows.forEach(el => {
             el.style.boxShadow = '0 4px 12px #0000003d';
         })
-         //   man.src = man.src.slice(0, -4) + '-Light.svg';
+        cards.forEach(el =>{
+            el.style.background = '#282828';
+        })
     }
     else {
         positionX = 0;
@@ -49,7 +50,68 @@ document.addEventListener('DOMContentLoaded', () => {
         shadows.forEach(el => {
             el.style.boxShadow = 'none';
         })
-       // man.src = man.src.slice(0, -10) + '.svg';
     }
   });
+
+
+const carousel = document.getElementById('carousel');
+let cards = Array.from(carousel.querySelectorAll('.card'));
+let cardWidth = 0;
+if (cards.length > 0) {
+  cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(cards[0]).marginRight);
+}
+
+carousel.addEventListener('scroll', () => {
+  const scrollLeft = carousel.scrollLeft;
+  const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+
+  // Если прокрутка достигла конца
+  if (scrollLeft >= maxScrollLeft - cardWidth) {
+    // Клонируем первую карточку и вставляем в конец
+    const firstCard = cards[0];
+    const clone = firstCard.cloneNode(true);
+    carousel.appendChild(clone);
+    // Обновляем массив карточек
+    cards = Array.from(carousel.querySelectorAll('.card'));
+  }
+
+  // Если прокрутка достигла начала
+  if (scrollLeft <= 0) {
+    // Клонируем последнюю карточку и вставляем в начало
+    const lastCard = cards[cards.length - 1];
+    const clone = lastCard.cloneNode(true);
+    carousel.insertBefore(clone, cards[0]);
+    // Обновляем массив карточек
+    cards = Array.from(carousel.querySelectorAll('.card'));
+    // Немного смещаем прокрутку вперед, чтобы не "зависнуть" при вставке
+    carousel.scrollLeft = cardWidth;
+  }
+});
+
+const second = document.getElementById('second');
+const minute = document.getElementById('minute');
+const hour = document.getElementById('hour');
+
+  setInterval(() =>{
+
+  let secNum = Number(second.textContent);
+  let minNum = Number(minute.textContent);
+  let HrNum = Number(hour.textContent);
+
+    if (secNum !== 0) {
+      second.textContent = (secNum - 1).toString().padStart(2, '0');
+    }
+    else {
+      if (minNum !== 0) {
+        second.textContent = 59;
+        minute.textContent = (minNum - 1).toString().padStart(2, '0');; 
+      }
+      else {
+        if (HrNum !== 0) {
+          minute.textContent = 59;
+          hour.textContent = (HrNum - 1).toString().padStart(2, '0');;
+        }
+      }
+    }
+}, 1000);
 });

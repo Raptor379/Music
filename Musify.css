@@ -70,6 +70,9 @@ header{
             header section h1{
                 max-width: 570px;
             }
+                header section h1 font{
+                    color: #F14A16;
+                }
             header section h5{
                 max-width: 727px;
             }
@@ -122,6 +125,7 @@ header{
     z-index: -1;
     bottom: 0;
     left: -189px;
+    opacity: 1;
 }
 .Background-particle-purple{
     position: absolute;
@@ -140,4 +144,178 @@ header{
     z-index: -1;
     right: 0;
 }
-    
+.Trends{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+    padding: 130px 0;
+}
+    .Trends>ul{
+    display: flex;
+    gap: 125px;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+    }
+        .Trends>ul::-webkit-scrollbar {
+            visibility: hidden;
+        }
+        .Trends>ul>li{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 50px;
+            border: #ffffffa8 1px solid;
+            height: 696px;
+            max-width:380px;
+            padding: 0 25px;
+            background:linear-gradient(135deg, #ffffffd0 0%, #ffffff13 100%);
+            font-size: 26px;
+            line-height: 36px;
+            scroll-snap-align: center;
+        }
+            .Trends h2{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                height: 256px;
+                color: #FFFFFF;
+            }
+                .Trends ul li ul li{
+                    list-style-type: disc;
+                    list-style-position: inside;
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: #FFFFFF;
+                }
+            .Trends aside{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0 0 25px 0;
+            }
+                .Trends aside button{
+                    width: 150px;
+                    height: 50px;
+                }
+.Why{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0 126px 170px 126px;
+    padding: 30px 56px 56px 56px;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0.03em;
+    background:linear-gradient(110deg, #370665 0%, #35589A 100%);
+    border-radius: 25px;
+}
+    .Why h1{
+        font-size: 45px;
+        font-weight: 700;
+        color: #FFFFFF;
+    }
+    .Why ul{
+        display: flex;
+        gap: 115px;
+    }
+        .Why ul li{
+            display:flex;
+            gap: 20px;
+            color: #FFFFFF;
+        }
+.Offer{
+    display: flex;
+    gap: 50px;
+    padding: 0 190px 190px;
+}
+    .Offer article:nth-of-type(1){
+        position: relative;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+        .Offer article:nth-of-type(1) div{
+            display: flex;
+            position: absolute;
+            background-color: #370665;
+            width: 166px;
+            height: 166px;
+            border-radius: 166px;
+            margin: 18px 0 0 43px;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: 0.02em;
+            text-align: center;
+            box-shadow: 8px 10px 17px rgba(0, 0, 0, 0.25);
+            color: #FFFFFF;
+        }
+    .Offer article:nth-of-type(2){
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+    }
+        .Offer article:nth-of-type(2) section{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+            .Offer article:nth-of-type(2) section h2{
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 36px;
+                letter-spacing: 0.02em;
+            }
+            .Offer article:nth-of-type(2) section ul{
+                display: flex;
+                gap: 20px;
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 36px;
+                letter-spacing: 0.02em;
+            }
+                .Offer article:nth-of-type(2) section ul li{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                }
+                    .Offer article:nth-of-type(2) section ul li div{
+                        background-color: #370665;
+                        padding: 17px 12px;
+                        border-radius: 32px;
+                        font-size: 60px;
+                        font-weight: 700;
+                        line-height: 60px;
+                        letter-spacing: 0.05em;
+                        color: #FFFFFF;
+                    }
+        .Offer article:nth-of-type(2) aside{
+            display: flex;
+            gap: 25px;
+        }
+            .Offer article:nth-of-type(2) aside button{
+                width: 225px;
+                height: 75px;
+            }
+.Other{
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+}
+    .Other h1{
+        font-size: 65px;
+        line-height: 65px;
+        letter-spacing: 0.04em;
+    }
+    .Other article{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-width: 1470px;
+    }
